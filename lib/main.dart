@@ -1,6 +1,6 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 
+import 'package:flutter/material.dart';
+import 'package:practice_github/profile_page.dart';
 void main(){
   runApp(MyApp());
 }
@@ -37,7 +37,9 @@ class _HomePageState extends State<HomePage> {
         child: ElevatedButton(
             onPressed: (){
               setState(() {
-                
+                Navigator.push(context, MaterialPageRoute(
+                    builder: (context)=> ProfilePage())
+                );
               });
             },
             child: Text("Go to Profile")
